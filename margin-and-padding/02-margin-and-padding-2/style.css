@@ -48,10 +48,32 @@ button {
           <div class="button-container">and a <button>BIG BUTTON</button></div>
     </div> */
 
+/* es gibt predeterminierte Margins 
+die von dem Browser abgeben werden an bestimmten
+selectoren, zb bei dein H1 hier (gueck die Fotos)
+
+Damit du, diese Margins so zu sagen resetest und von null
+anfangen kannst, sollst du ein universal selector für alle
+selectoren und elementen (also mit den universal
+selector * , auch für die pseudoselektoren ::afte und ::before)
+ein margin=0 um alles predeterminiert zu entfernen. 
+Dannach kannst du für jede element alles
+was du brauchst dazu geben. Aber so bist du sicher, 
+dass du von 0 an anfängst und deine Rechnungen stimmen.
+
+Auch wichtig damit die rechnungen stimmen, ist dass man 
+die box-sizing: border-box; universal zu benutzen.
+
+Hier lesen:
+https://kulturbanause.de/blog/mit-box-sizing-border-box-das-css-box-model-verandern/
+
+*/
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -60,35 +82,94 @@ body {
 }
 
 .card {
-  /* you need display:flex or display:grid:  to give a gap of 8px between elements,  */
+  /* - README: There is an 8px gap between each
+ of the blue sections inside the card. -gap 8*/
+
+  /* du brauchst ein display:flex or display:grid: 
+um die propierty von 8px gap zwieschen elementen
+geben zu können die in Readme gefordet wird , aber dann muss du eine 
+flex-direction:columnn wieder geben, damit alles
+wieder über die Boxen in der Verticale sind 
+und nicht neben ein ander (row)  */
   display: flex;
   flex-direction: column;
+  gap: 8px;
+
   width: 400px;
   background: #fff;
-  /* margin: 16px auto; remove this to have a empty margin*/
-  /* - There is 8px between the edge of the card and its content (the blue sections). */
+  margin: 16px auto;
+
+  /* - README: There is 8px between the 
+  edge of the card and its content
+  (the blue sections). */
   padding: 8px;
-  /* - There is an 8px gap between each of the blue sections inside the card. -gap 8*/
-  gap: 8px;
+
+  /* border-hilfe: ich male mir immer 
+  als hilfe border in jede Box die ich habe,
+  um besser zu erkennen wo den Border 
+  und so zu sagen das ende der Box steht. 
+  Dannach wenn man fertig ist, kann man die entfernen.
+  Ich lasse es aber hier damt du die siehts */
+
   border: 2px solid red;
 }
 
 .title {
+  /* README: - The title of the card uses a 
+  16px font.ALSO: -font size=16px */
+  font-size: 16px;
+  /* README: - There are 8px between 
+  the title text and the edge of the 
+  title section.ALSO -padding 8px */
+  padding: 8px;
   background: #e3f4ff;
+  /* boder-hilfe */
   border: 2px solid green;
 }
 
 .content {
+  /* README: - The content section has 16px 
+  space on the top and bottom, 
+  and 8px on either side. 
+  Hier ist nicht klar ob sie padding
+  oder margin wollen, aber wenn wir mit den
+  original in diesen Moment vergleichst, siehts 
+  du dass sie padding ist*/
+  padding: 16px 8px;
   background: #e3f4ff;
+  /* boder-hilfe */
   border: 2px solid blue;
 }
 
 .button-container {
+  /* README: - Everything inside the 
+  `.button-container` section
+  is centered, and there is 8px 
+  padding. alles zu Zentrieren schaffst 
+  du es mit text-align: center;
+  Aber da inline elemente sind, gehen alle neben einander,
+  deswegen kannst du hier auch ein flex machen 
+  mit direction column*/
+  padding: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* README :- The Big Button is 
+  centered on its own line. Das schaffen es mit
+  den align-items: center;*/
+  align-items: center;
   background: #e3f4ff;
+  /* boder-hilfe */
   border: 2px solid orange;
 }
 
 button {
   background: white;
+  display: inline;
+
+  /* README: - The Big Button has 24px
+  space on the sides,
+  and 8px on top and bottom. */
+  padding: 8px 24px;
   border: 1px solid #eee;
 }
