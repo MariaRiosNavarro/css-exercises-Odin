@@ -2,10 +2,13 @@
 
 /* es gibt predeterminierte Margins 
 die von dem Browser abgeben werden an bestimmten
-selectoren, zb bei dein H1 hier (gueck die Fotos die ich hier unten den box hinzufüge)
+selectoren, zb bei dein H1 hier (gueck die Fotos 
+die ich hier unten den index.html hinzufüge.
+Oder forke dir mein repository und öffnet die HTML zu visualisieren.
+Da siehst du ein predeterminierte margin bei der H1)
 
 Damit du, diese Margins so zu sagen resetest und von null
-anfangen kannst, sollst du ein universal selector für alle
+anfängst, sollst du ein universal selector für alle
 selectoren und elementen (also mit den universal
 selector * , auch für die pseudoselektoren ::afte und ::before)
 ein margin=0 um alles predeterminiert zu entfernen. 
@@ -19,7 +22,7 @@ die box-sizing: border-box; universal zu benutzen.
 Hier lesen:
 https://kulturbanause.de/blog/mit-box-sizing-border-box-das-css-box-model-verandern/
 
-*/
+Beide punkten (margin reset) und ein border-box size zu bekommen schaffst du mit diesen Ausdrück:
 
 *,
 *::before,
@@ -27,6 +30,19 @@ https://kulturbanause.de/blog/mit-box-sizing-border-box-das-css-box-model-verand
   box-sizing: border-box;
   margin: 0;
 }
+
+Die sollte in jeder deine CSS haupt style dokument immer oben stehen
+*/
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
 
 body {
   background: #eee;
