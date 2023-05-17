@@ -7,13 +7,17 @@ body {
   width: 400px;
   background: #fff;
   margin: 16px auto;
-  padding: 8px;
+  padding: 16px;
 }
 
 .title {
   background: #e3f4ff;
   font-size: 16px;
+  /* Ich verstehe nicht warum man hier noch margin angibt, wenn es gelöscht wird verändert sich der obere
+  Rahmen ? */
   margin-top: 0px;
+  /* hier ist ein margin angegeben zum 2. Objekt (.content), obwohl dieses auch einen margin-top von
+  8px hat - es sollte also nicht bewirken; nach dem Löschen der Zeile wird der Zwischenraum größer ? */
   margin-bottom: 8px;
   padding: 8px;
 }
