@@ -5,18 +5,19 @@ die von dem Browser abgeben werden an bestimmten
 selectoren, zb bei dein H1 hier (gueck die Fotos 
 die ich hier unten den index.html hinzufüge.
 Oder forke dir mein repository und öffnet die HTML zu visualisieren.
-Da siehst du ein predeterminierte margin bei der H1)
+Da siehst du ein text und den vergleich der predeterminierte margin bei der H1
+und ohne)
 
 Damit du, diese Margins so zu sagen resetest und von null
 anfängst, sollst du ein universal selector für alle
-selectoren und elementen (also mit den universal
-selector * , auch für die pseudoselektoren ::afte und ::before)
-ein margin=0 um alles predeterminiert zu entfernen. 
+selectoren und elementen ein margin=0 um alles predeterminiert zu entfernen.
+(also mit den universal selector * , auch für die pseudoselektoren ::afte und ::before)
+
 Dannach kannst du für jede element alles
 was du brauchst dazu geben. Aber so bist du sicher, 
 dass du von 0 an anfängst und deine Rechnungen stimmen.
 
-Auch wichtig damit die rechnungen stimmen, ist dass man 
+Auch wichtig damit die Rechnungen stimmen, ist dass man 
 die box-sizing: border-box; universal zu benutzen.
 
 Hier lesen:
@@ -32,6 +33,9 @@ Beide punkten (margin reset) und ein border-box size zu bekommen schaffst du mit
 }
 
 Die sollte in jeder deine CSS haupt style dokument immer oben stehen
+Dannach war kein Problem die Readme-anweisungen zu befolgen und dass alles passt. 
+Aber du brauchst mehr als nur padding und margins, sondern auch ein paar Flexboxen
+Guck hier meine Lösung ob dir hilft und noch fragen hast
 */
 
 
